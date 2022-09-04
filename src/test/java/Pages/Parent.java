@@ -48,13 +48,6 @@ public class Parent {
         waitUntilVisible(element); // gözükene kadar bekle
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
-    public void waitUntillLoading(){
-        WebDriverWait wait = new WebDriverWait(GWD.driver,Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"),0));
-    }
-
-
-
 
 
 }
