@@ -19,6 +19,13 @@ Feature: Subject Categories
     And Click on the element in the Dialog
       | saveButton |
     And Success massage should be displayed
+    And User edit item from Dialog
+      | group11 |
+    And User sending the keys in Dialog content
+      | codeInput | group |
+    And Click on the element in the Dialog
+      | saveButton |
+    And Success massage should be displayed
     And User delete item from Dialog
       | group11 |
     And Success massage should be displayed
