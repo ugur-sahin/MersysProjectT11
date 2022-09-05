@@ -55,4 +55,11 @@ public class SubjectCategoriesSteps {
     }
 
 
+    @And("User edit item from Dialog")
+    public void userEditItemFromDialog(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for (int i = 0; i < listElement.size(); i++) {
+            dc.SearchAndEdit(listElement.get(i));
+        }
+    }
 }

@@ -50,6 +50,8 @@ public class DialogContent extends Parent {
     private WebElement deleteDialogButton;
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")             // common
     private WebElement acceptCookies;
+    @FindBy(xpath = "//ms-edit-button//button")                         // common
+    private WebElement SubjectEditButton;
 
     WebElement myElement;
 
@@ -107,6 +109,9 @@ public class DialogContent extends Parent {
             case "deleteDialogButton":
                 myElement = deleteDialogButton;
                 break;
+            case "SubjectEditButton":
+                myElement = SubjectEditButton;
+                break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
@@ -139,6 +144,16 @@ public class DialogContent extends Parent {
 
         findAndClick("deleteButton"); // silme butonuna bas
         findAndClick("deleteDialogButton"); // dialogdaki silme butonuna bas
+    }
+    public void SearchAndEdit(String searchText) // 2. aşama
+    {
+        findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
+        findAndClick("searchButton"); // arama butonuna bas
+        GWD.Bekle(3);
+//        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
+//        wait.until(ExpectedConditions.stalenessOf(deleteButton));
+
+        findAndClick("SubjectEditButton"); // silme butonuna bas
     }
 
 
