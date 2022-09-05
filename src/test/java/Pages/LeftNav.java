@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends Parent{
+public class LeftNav extends Parent {
 
     public LeftNav() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
@@ -23,12 +23,21 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Subject Categories'])")
     private WebElement SubjectCategories;
 
+    @FindBy(linkText = "Document Types")
+    private WebElement DocumentTypes;
+
+    @FindBy(id = "mat-select-value-15")
+    private WebElement Stage;
+
     WebElement myElement;
-    public void findAndClick(String strElement ) // 2. aşama
+
+    public void findAndClick(String strElement) // 2. aşama
     {
-        switch (strElement){
-            case "setupOne" : myElement=setupOne; break;
-            case "parameters" : myElement=parameters; break;
+        switch (strElement) {
+            case "setupOne": myElement = setupOne;break;
+            case "parameters": myElement = parameters;break;
+            case "DocumentTypes": myElement = DocumentTypes;break;
+            case "Stage": myElement = Stage;break;
             case "Education" : myElement=Education; break;
             case "EducationSetup" : myElement=EducationSetup; break;
             case "SubjectCategories" : myElement=SubjectCategories; break;
