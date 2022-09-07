@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -49,6 +50,15 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")             // common
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "//span[contains(text(),'Delete')]") //ry
+    private WebElement deleteDialogBtn;
+
+    @FindBy(css = "[data-icon='pen-to-square']") //ry
+    private WebElement rEdit;
+
+
+
+
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
     {
@@ -74,6 +84,8 @@ public class DialogContent extends Parent{
             case "deleteButton" :   myElement = deleteButton; break;
             case "acceptCookies" :  myElement = acceptCookies; break;
             case "editButton" :     myElement = editButton; break;
+            case "deleteDialogBtn" :     myElement = deleteDialogBtn; break;
+            case "rEdit" :     myElement = rEdit; break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
@@ -104,6 +116,20 @@ public class DialogContent extends Parent{
 
         findAndClick("deleteButton"); // silme butonuna bas
         findAndClick("deleteDialogBtn"); // dialogdaki silme butonuna bas
+    }
+    public void SearchAndEditry(String searchText, String editName) // 2. aşama
+    {
+
+        GWD.Bekle(2);
+        findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
+        findAndClick("searchButton"); // arama butonuna bas
+
+
+        GWD.Bekle(2);
+        findAndClick("rEdit");
+        findAndSend("nameInput",editName);
+        findAndClick("saveButton");
+
     }
 
 

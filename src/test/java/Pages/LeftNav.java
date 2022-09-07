@@ -29,6 +29,15 @@ public class LeftNav extends Parent {
     @FindBy(id = "mat-select-value-15")
     private WebElement Stage;
 
+    @FindBy(xpath = "//span[text()='Human Resources']")             //ry
+    private WebElement humanResources;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")             //ry
+    private WebElement setupThree;
+
+    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")             //ry
+    private WebElement positionCategories;
+
     WebElement myElement;
 
     public void findAndClick(String strElement) // 2. aşama
@@ -41,6 +50,9 @@ public class LeftNav extends Parent {
             case "Education" : myElement=Education; break;
             case "EducationSetup" : myElement=EducationSetup; break;
             case "SubjectCategories" : myElement=SubjectCategories; break;
+            case "humanResources" :     myElement = humanResources; break;
+            case "setupThree" :     myElement = setupThree; break;
+            case "positionCategories" :     myElement = positionCategories; break;
 
         }
         // burda string isimden webelemente ulaşıcam
