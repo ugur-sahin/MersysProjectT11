@@ -13,7 +13,7 @@ public class SubjectCategoriesSteps {
     DialogContent dc = new DialogContent();
     FormContent fc = new FormContent();
 
-    @And("Click on the element in the left Nav")
+   /* @And("Click on the element in the left Nav")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
 
@@ -59,7 +59,7 @@ public class SubjectCategoriesSteps {
     public void userEditItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
-            dc.SearchAndEdit(listElement.get(i));
+            //dc.SearchAndEdit(listElement.get(i));
         }
-    }
+    }*/
 }
