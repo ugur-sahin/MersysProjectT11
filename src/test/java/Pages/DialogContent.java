@@ -107,29 +107,36 @@ public class DialogContent extends Parent{
         findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
-
          WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
          wait.until(ExpectedConditions.stalenessOf(deleteButton));
 
-
-        // GWD.Bekle(2);
-
+        //GWD.Bekle(2);
         findAndClick("deleteButton"); // silme butonuna bas
         findAndClick("deleteDialogBtn"); // dialogdaki silme butonuna bas
     }
     public void SearchAndEditry(String searchText, String editName) // 2. aşama
     {
-
         GWD.Bekle(2);
         findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
-
-
+        // stalenessOf çalışmadı
         GWD.Bekle(2);
         findAndClick("rEdit");
         findAndSend("nameInput",editName);
         findAndClick("saveButton");
+    }
+    public void SearchAndDeletery(String searchText) // 2. aşama
+    {
+        //WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
 
+        //wait.until(ExpectedConditions.stalenessOf(searchButton));
+        findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
+        findAndClick("searchButton"); // arama butonuna bas
+
+        //wait.until(ExpectedConditions.stalenessOf(deleteButton));
+        GWD.Bekle(2);
+        findAndClick("deleteButton"); // silme butonuna bas
+        findAndClick("deleteDialogBtn"); // dialogdaki silme butonuna bas
     }
 
 

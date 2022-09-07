@@ -6,6 +6,7 @@ Feature: Position Categories Functionality
     Then User should login successfuly
 
   Scenario: Add Position Categories
+
     And Click on the element in the left Nav ry
       | humanResources     |
       | setupThree         |
@@ -23,6 +24,7 @@ Feature: Position Categories Functionality
     And Success message should be displayed ry
 
   Scenario: Edit  Position Categories
+
     And Click on the element in the left Nav ry
       | humanResources     |
       | setupThree         |
@@ -33,14 +35,15 @@ Feature: Position Categories Functionality
     And Success message should be displayed ry
 
   Scenario: Delete Position Categories
+
     And Click on the element in the left Nav ry
       | humanResources     |
       | setupThree         |
       | positionCategories |
 
-    #And User deleting on the dialog content ry "grup11edit"
+    And User deleting on the dialog content ry "grup11edit"
 
-    #And Success message should be displayed ry
+    And Success message should be displayed ry
 
 
 
