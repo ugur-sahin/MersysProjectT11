@@ -60,8 +60,10 @@ public class DialogContent extends Parent{
     private WebElement SubjectEditButton;
     @FindBy(xpath = "//textarea[@formcontrolname='description']")                         // inanc
     private WebElement Description;
-    @FindBy(xpath = "//*[@id=\"mat-select-value-43\"]")                         // inanc
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']//div//div")                         // inanc
     private WebElement Stage;
+    @FindBy(css = "[class='mat-option-text']")                         // inanc
+    private WebElement  studentRegistration ;
 
 
 
@@ -99,6 +101,7 @@ public class DialogContent extends Parent{
             case "rEdit" :     myElement = rEdit; break;
             case "SubjectEditButton": myElement = SubjectEditButton;  break;
             case "Stage": myElement = Stage;  break;
+            case "studentRegistration": myElement = studentRegistration;  break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
