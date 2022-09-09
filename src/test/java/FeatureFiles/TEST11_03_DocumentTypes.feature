@@ -14,20 +14,21 @@ Feature: Subject Categories
     And Click on the element in the Dialog IC
       | addButton |
     And User sending the keys in Dialog content IC
-      | nameInput | group11 |
-      | Description | group11 |
+      | nameInput | selimDocuments |
+      | Description | myDocuments |
     And Click on the element in the Dialog IC
       | Stage |
+      | studentRegistration |
       | saveButton |
     And Success massage should be displayed IC
     And User edit item from Dialog IC
-      | group11 |
+      | selimDocuments |
     And User sending the keys in Dialog content IC
-      | codeInput | group |
+      | nameInput | selimDocumentsss |
     And Click on the element in the Dialog IC
       | saveButton |
     And Success massage should be displayed IC
     And User delete item from Dialog IC
-      | group11 |
+      | selimDocumentsss |
     And Success massage should be displayed IC
 
