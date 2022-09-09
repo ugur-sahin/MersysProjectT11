@@ -48,6 +48,10 @@ public class Parent {
         waitUntilVisible(element); // gözükene kadar bekle
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
+    public void waitUntilSearch(){ // search butonunun text inde search yazana kadar bekle
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
+    }
 
 
 }

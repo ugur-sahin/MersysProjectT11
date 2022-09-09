@@ -2,17 +2,13 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
-import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-import java.time.Duration;
 import java.util.List;
 
-public class _01_PositionCategoriesSteps {
+public class TEST11_01_PositionCategoriesSteps {
 
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();

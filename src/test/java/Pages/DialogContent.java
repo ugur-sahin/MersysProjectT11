@@ -114,24 +114,26 @@ public class DialogContent extends Parent{
         findAndClick("deleteButton"); // silme butonuna bas
         findAndClick("deleteDialogBtn"); // dialogdaki silme butonuna bas
     }
-    public void SearchAndEditry(String searchText, String editName)
-    {   waitUntilSearch();
+    public void SearchAndEditry(String searchText, String editName) {
+        waitUntilSearch();
         findAndSend("searchInput",searchText);
         findAndClick("searchButton");
         findAndClick("rEdit");
         findAndSend("nameInput",editName);
-        findAndClick("saveButton");}
+        findAndClick("saveButton");
+    }
 
-    public void SearchAndDeletery(String searchText)
-    {   waitUntilSearch();
+
+    public void SearchAndDeletery(String searchText){
+        waitUntilSearch();
         findAndSend("searchInput",searchText);
         findAndClick("searchButton");
+        waitUntilSearch();
         findAndClick("deleteButton");
-        findAndClick("deleteDialogBtn");}
-
-    public void waitUntilSearch(){ // search butonunun text inde search yazana kadar bekle
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
+        findAndClick("deleteDialogBtn");
     }
+
+
+
 
 }
