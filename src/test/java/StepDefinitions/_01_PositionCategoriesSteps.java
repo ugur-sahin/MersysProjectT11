@@ -45,13 +45,18 @@ public class _01_PositionCategoriesSteps {
 
     @And("Success message should be displayed ry")
     public void successMessageShouldBeDisplayedRy() {
-        dc.findAndContainsText("successMessage","success");
+
+        dc.findAndContainsText("successMessage", "success");
     }
 
 
     @And("User editing on the Dialog content ry {string} edit {string}")
     public void userEditingOnTheDialogContentRyEdit(String oldName, String newName) {
-        dc.SearchAndEditry(oldName,newName);
+        dc.SearchAndEditry(oldName, newName);
+    }
 
+    @And("User deleting on the dialog content ry {string}")
+    public void userDeletingOnTheDialogContentRy(String searchText) {
+        dc.SearchAndDeletery(searchText);
     }
 }

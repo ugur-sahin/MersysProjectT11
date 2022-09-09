@@ -107,33 +107,31 @@ public class DialogContent extends Parent{
         findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
 
-
          WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
          wait.until(ExpectedConditions.stalenessOf(deleteButton));
 
-
-        // GWD.Bekle(2);
-
+        //GWD.Bekle(2);
         findAndClick("deleteButton"); // silme butonuna bas
         findAndClick("deleteDialogBtn"); // dialogdaki silme butonuna bas
     }
-    public void SearchAndEditry(String searchText, String editName) // 2. aşama
-    {
-
-        GWD.Bekle(2);
-        findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
-        findAndClick("searchButton"); // arama butonuna bas
-
-
-        GWD.Bekle(2);
+    public void SearchAndEditry(String searchText, String editName)
+    {   waitUntilSearch();
+        findAndSend("searchInput",searchText);
+        findAndClick("searchButton");
         findAndClick("rEdit");
         findAndSend("nameInput",editName);
-        findAndClick("saveButton");
+        findAndClick("saveButton");}
 
+    public void SearchAndDeletery(String searchText)
+    {   waitUntilSearch();
+        findAndSend("searchInput",searchText);
+        findAndClick("searchButton");
+        findAndClick("deleteButton");
+        findAndClick("deleteDialogBtn");}
+
+    public void waitUntilSearch(){ // search butonunun text inde search yazana kadar bekle
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
     }
-
-
-
-
 
 }
