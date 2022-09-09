@@ -1,0 +1,14 @@
+
+                            PROJENİN GITHUB'DAN UPDATE EDILMESI CHECK-LIST
+    STEP-1-> ORIJIN ICINDEKI "master" (YILDIZLI OLAN) "Checkout" EDILECEK ve AYNI YERDEYKEN "update" YAPILACAK.
+    STEP-2-> LOCAL ICINDEKI "branch" (ETIKET ISARETI OLAN) "Checkout" EDILECEK.
+    STEP-3-> LOCAK ICINDEKI "master" UZERINDE SAG TUS TIKLANACAK VE "Merge 'master' into 'Branch Name'" denilecek.
+          -> Yukarıdaki işlemleri yaptığımızda GitHub'daki ana projeyi hem bilgisayarımıza hem de branch'imizi güncrellemiş oluyoruz.
+
+
+                             PROJENİN GITHUB'A PUSH EDILMESI CHECK-LIST
+    STEP-1-> LOCAL ICINDEKI "BRANCH" SECILIYKEN (YANI CHECKOUT YAPILDIKTAN SONRA) "COMMIT" TIKLANACAK ve YAPILAN
+             DEGISIKLER SECILECEK "COMMIT" EDILECEK.
+    STEP-2-> GIT>GitHub>Create Pull Request TIKLANDIKTAN SONRA SOL TARAFTAKI ACILAN PENCEREDEYE BASLIK VE ACIKLAMA YAZILDIKTAN SONRA
+             "CREATE PULL REQUEST" TIKLANACAK.
+          -> Yukarıdaki işlemleri yaptığımızda GitHub'daki ana projeyi hem bilgisayarımıza hem de branch'imizi güncrellemiş oluyoruz.
