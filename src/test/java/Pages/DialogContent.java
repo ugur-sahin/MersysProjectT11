@@ -58,6 +58,12 @@ public class DialogContent extends Parent{
     private WebElement capacity;
     @FindBy(xpath = "//ms-edit-button//button")                         // inanc
     private WebElement SubjectEditButton;
+    @FindBy(xpath = "//textarea[@formcontrolname='description']")                         // inanc
+    private WebElement Description;
+    @FindBy(xpath = "//*[@id=\"mat-select-value-43\"]")                         // inanc
+    private WebElement Stage;
+
+
 
 
 
@@ -73,6 +79,7 @@ public class DialogContent extends Parent{
             case "shortName" :      myElement=  shortName;      break;
             case "searchInput" :    myElement=  searchInput;    break;
             case "capacity" :       myElement=  capacity;       break;
+            case "Description" :       myElement=  Description;       break;
 
         }
         // burda string isimden webelemente ulaşıcam
@@ -91,6 +98,7 @@ public class DialogContent extends Parent{
             case "deleteDialogBtn" :     myElement = deleteDialogBtn; break;
             case "rEdit" :     myElement = rEdit; break;
             case "SubjectEditButton": myElement = SubjectEditButton;  break;
+            case "Stage": myElement = Stage;  break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
