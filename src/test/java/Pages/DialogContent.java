@@ -52,9 +52,10 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "//span[contains(text(),'Delete')]") //ry
     private WebElement deleteDialogBtn;
-
     @FindBy(css = "[data-icon='pen-to-square']") //ry
     private WebElement rEdit;
+    @FindBy(css = "[data-placeholder='Capacity']") //ry
+    private WebElement capacity;
 
 
 
@@ -69,6 +70,7 @@ public class DialogContent extends Parent{
             case "codeInput" :      myElement=  codeInput;      break;
             case "shortName" :      myElement=  shortName;      break;
             case "searchInput" :    myElement=  searchInput;    break;
+            case "capacity" :       myElement=  capacity;       break;
 
         }
         // burda string isimden webelemente ulaşıcam
