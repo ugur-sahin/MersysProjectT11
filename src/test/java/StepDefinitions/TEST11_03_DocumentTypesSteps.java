@@ -13,7 +13,7 @@ public class TEST11_03_DocumentTypesSteps {
     DialogContent dc = new DialogContent();
     FormContent fc = new FormContent();
 
-    @And("Click on the element in the left Nav")
+    @And("Click on the element in the left Nav IC")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
 
@@ -22,7 +22,7 @@ public class TEST11_03_DocumentTypesSteps {
         }
     }
 
-    @And("Click on the element in the Dialog")
+    @And("Click on the element in the Dialog IC")
     public void clickOnTheElementInTheDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
@@ -30,7 +30,7 @@ public class TEST11_03_DocumentTypesSteps {
         }
     }
 
-    @And("User sending the keys in Dialog content")
+    @And("User sending the keys in Dialog content IC")
     public void userSendingTheKeysInDialogContent(DataTable elements) {
         List<List<String>> listElement = elements.asLists(String.class);
         for (int i = 0; i < listElement.size(); i++) {
@@ -39,7 +39,7 @@ public class TEST11_03_DocumentTypesSteps {
         }
     }
 
-    @And("User delete item from Dialog")
+    @And("User delete item from Dialog IC")
     public void userDeleteItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
@@ -49,13 +49,13 @@ public class TEST11_03_DocumentTypesSteps {
 
     }
 
-    @And("Success massage should be displayed")
+    @And("Success massage should be displayed IC")
     public void successMassageShouldBeDisplayed() {
         dc.findAndContainsText("successMessage", "success");
     }
 
 
-    @And("User edit item from Dialog")
+    @And("User edit item from Dialog IC")
     public void userEditItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {

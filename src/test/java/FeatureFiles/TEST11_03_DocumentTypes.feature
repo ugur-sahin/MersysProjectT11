@@ -7,27 +7,27 @@ Feature: Subject Categories
 
 
   Scenario: Add Subject Categories,Edit Subject Categories and Delete Subject Categories
-    And Click on the element in the left Nav
+    And Click on the element in the left Nav IC
       | setupOne |
       | parameters    |
       | DocumentTypes |
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog IC
       | addButton |
-    And User sending the keys in Dialog content
+    And User sending the keys in Dialog content IC
       | nameInput | group11 |
       | Description | group11 |
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog IC
       | Stage |
       | saveButton |
-    And Success massage should be displayed
-    And User edit item from Dialog
+    And Success massage should be displayed IC
+    And User edit item from Dialog IC
       | group11 |
-    And User sending the keys in Dialog content
+    And User sending the keys in Dialog content IC
       | codeInput | group |
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog IC
       | saveButton |
-    And Success massage should be displayed
-    And User delete item from Dialog
+    And Success massage should be displayed IC
+    And User delete item from Dialog IC
       | group11 |
-    And Success massage should be displayed
+    And Success massage should be displayed IC
 
