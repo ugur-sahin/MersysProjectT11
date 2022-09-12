@@ -6,7 +6,7 @@ Feature: Subject Categories
     Then User should login successfuly
 
 
-  Scenario: Add Subject Categories,Edit Subject Categories and Delete Subject Categories
+  Scenario: Add ,Edit and Delete Document Types
     And Click on the element in the left Nav IC
       | setupOne |
       | parameters    |
@@ -19,6 +19,8 @@ Feature: Subject Categories
     And Click on the element in the Dialog IC
       | Stage |
       | studentRegistration |
+    And Click to TAB Key IC
+    And Click on the element in the Dialog IC
       | saveButton |
     And Success massage should be displayed IC
     And User edit item from Dialog IC
