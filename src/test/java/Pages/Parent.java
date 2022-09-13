@@ -52,6 +52,10 @@ public class Parent {
         WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
     }
+    public void waitUntilLoading() { //inanc
+        WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
+    }
 
 
 }
