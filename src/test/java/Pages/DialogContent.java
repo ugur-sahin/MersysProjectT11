@@ -66,7 +66,8 @@ public class DialogContent extends Parent{
     private WebElement  studentRegistration ;
 
 
-
+    @FindBy(css = "[data-icon='trash-can']>path")                         // inanc
+    private WebElement  deleteButtonnn ;
 
 
 
