@@ -43,7 +43,7 @@ public class TEST11_06_SubjectCategoriesSteps {
     public void userDeleteItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
-            dc.SearchAndDelete(listElement.get(i));
+            dc.searchAndDeleteIn(listElement.get(i));
         }
 
 

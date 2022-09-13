@@ -22,7 +22,7 @@ Feature: Subject Categories
     And User edit item from Dialog
       | group11 |
     And User sending the keys in Dialog content
-      | codeInput | group |
+      | codeInput | group11 |
     And Click on the element in the Dialog
       | saveButton |
     And Success massage should be displayed

@@ -67,6 +67,8 @@ public class DialogContent extends Parent{
     private WebElement  deleteButtonnn ;
     @FindBy(xpath = "//*[@id='ms-text-field-20']")                         // inanc
     private WebElement  order ;
+    @FindBy(xpath = "//button[@type='submit']//span")                         // inanc
+    private WebElement  deleteinanc ;
 
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
@@ -102,6 +104,7 @@ public class DialogContent extends Parent{
             case "SubjectEditButton": myElement = SubjectEditButton;  break;
             case "Stage": myElement = Stage;  break;
             case "studentRegistration": myElement = studentRegistration;  break;
+            case "deleteinanc": myElement = deleteinanc;  break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
@@ -157,6 +160,16 @@ public class DialogContent extends Parent{
 //        wait.until(ExpectedConditions.stalenessOf(deleteButton));
 
         findAndClick("SubjectEditButton"); // silme butonuna bas
+    }
+
+    public void searchAndDeleteIn(String searchText) { //inanc
+        findAndSend("searchInput", searchText);
+        findAndClick("searchButton");
+        GWD.Bekle(2);
+        //waitUntilLoading();
+        findAndClick("deleteButton");
+        findAndClick("deleteinanc");
+
     }
 
 
