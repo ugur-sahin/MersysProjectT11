@@ -49,7 +49,6 @@ public class DialogContent extends Parent{
     private WebElement deleteButton;
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")             // common
     private WebElement acceptCookies;
-
     @FindBy(xpath = "//span[contains(text(),'Delete')]") //ry
     private WebElement deleteDialogBtn;
     @FindBy(css = "[data-icon='pen-to-square']") //ry
@@ -64,12 +63,10 @@ public class DialogContent extends Parent{
     private WebElement Stage;
     @FindBy(css = "[class='mat-option-text']")                         // inanc
     private WebElement  studentRegistration ;
-
-
     @FindBy(css = "[data-icon='trash-can']>path")                         // inanc
     private WebElement  deleteButtonnn ;
-
-
+    @FindBy(xpath = "//*[@id='ms-text-field-20']")                         // inanc
+    private WebElement  order ;
 
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
@@ -82,7 +79,9 @@ public class DialogContent extends Parent{
             case "shortName" :      myElement=  shortName;      break;
             case "searchInput" :    myElement=  searchInput;    break;
             case "capacity" :       myElement=  capacity;       break;
-            case "Description" :       myElement=  Description;       break;
+            case "Description" :    myElement=  Description;    break;
+            case "order" :          myElement=  order;          break;
+
 
         }
         // burda string isimden webelemente ulaşıcam
