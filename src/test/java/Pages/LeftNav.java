@@ -42,6 +42,9 @@ public class LeftNav extends Parent {
     @FindBy(linkText = "Departments")
     private WebElement departments;
 
+    @FindBy(linkText = "Positions")
+    private WebElement positions;
+
 
     WebElement myElement;
 
@@ -62,6 +65,7 @@ public class LeftNav extends Parent {
             case "locations" :     myElement = locations; break;
             case "gradeLevels" :     myElement = gradeLevels; break;
             case "departments" :     myElement = departments; break;
+            case "positions" :     myElement = positions; break;
 
         }
         // burda string isimden webelemente ulaşıcam
