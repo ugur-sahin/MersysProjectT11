@@ -7,6 +7,7 @@ Feature: Position Categories Functionality
     And Click on the element in the left Nav ry
       | setupOne    |
       | schoolSetup |
+
       | locations   |
 
   Scenario: Location Add
