@@ -70,6 +70,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@type='submit']//span")                         // inanc
     private WebElement  deleteinanc ;
 
+    @FindBy(css = "[formcontrolname='active']")                        // ry
+    private WebElement  activeBtn ;
+
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
     {
@@ -92,19 +95,20 @@ public class DialogContent extends Parent{
     public void findAndClick(String strElement ) // 2. aşama
     {
         switch (strElement){
-            case "loginButton" :    myElement = loginButton; break;
-            case "addButton" :      myElement = addButton; break;
-            case "saveButton" :     myElement = saveButton; break;
-            case "searchButton" :   myElement = searchButton; break;
-            case "deleteButton" :   myElement = deleteButton; break;
-            case "acceptCookies" :  myElement = acceptCookies; break;
-            case "editButton" :     myElement = editButton; break;
-            case "deleteDialogBtn" :     myElement = deleteDialogBtn; break;
-            case "rEdit" :     myElement = rEdit; break;
-            case "SubjectEditButton": myElement = SubjectEditButton;  break;
-            case "Stage": myElement = Stage;  break;
+            case "loginButton" :        myElement = loginButton; break;
+            case "addButton" :          myElement = addButton; break;
+            case "saveButton" :         myElement = saveButton; break;
+            case "searchButton" :       myElement = searchButton; break;
+            case "deleteButton" :       myElement = deleteButton; break;
+            case "acceptCookies" :      myElement = acceptCookies; break;
+            case "editButton" :         myElement = editButton; break;
+            case "deleteDialogBtn" :    myElement = deleteDialogBtn; break;
+            case "rEdit" :              myElement = rEdit; break;
+            case "SubjectEditButton":   myElement = SubjectEditButton;  break;
+            case "Stage":               myElement = Stage;  break;
             case "studentRegistration": myElement = studentRegistration;  break;
-            case "deleteinanc": myElement = deleteinanc;  break;
+            case "deleteinanc":         myElement = deleteinanc;  break;
+            case "activeBtn":           myElement = activeBtn;  break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);

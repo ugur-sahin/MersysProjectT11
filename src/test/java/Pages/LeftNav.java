@@ -26,18 +26,21 @@ public class LeftNav extends Parent {
     private WebElement DocumentTypes;
     @FindBy(id = "mat-select-value-15")
     private WebElement Stage;
-    @FindBy(xpath = "//span[text()='Human Resources']")             //ry
+    @FindBy(xpath = "//span[text()='Human Resources']")
     private WebElement humanResources;
-    @FindBy(xpath = "(//span[text()='Setup'])[3]")             //ry
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
     private WebElement setupThree;
-    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")             //ry
+    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")
     private WebElement positionCategories;
-    @FindBy(linkText = "School Setup")             //ry
+    @FindBy(linkText = "School Setup")
     private WebElement schoolSetup;
-    @FindBy(linkText = "Locations")             //ry
+    @FindBy(linkText = "Locations")
     private WebElement locations;
-    @FindBy(linkText = "Grade Levels")             //ry
+    @FindBy(linkText = "Grade Levels")
     private WebElement gradeLevels;
+
+    @FindBy(linkText = "Departments")
+    private WebElement departments;
 
 
     WebElement myElement;
@@ -58,6 +61,7 @@ public class LeftNav extends Parent {
             case "schoolSetup" :     myElement = schoolSetup; break;
             case "locations" :     myElement = locations; break;
             case "gradeLevels" :     myElement = gradeLevels; break;
+            case "departments" :     myElement = departments; break;
 
         }
         // burda string isimden webelemente ulaşıcam
