@@ -11,12 +11,12 @@ Feature: Attestations Features Functionality
     And Click on add attestations in the Dialog
       | addButton |
     And Fill the input in Dialog content
-      | nameInput | grup11-7 |
+      | nameInput | grup11-8 |
     And Click on save button in the Dialog
       | saveButton |
     Then Success message should be displayed
-    And Edit attestation content "grup11-7" edit "grup11-7edit"
+    And Edit attestation content "grup11-8" edit "grup11-8edit"
     Then Success message should be displayed
     And User delete item from Dialog
-      | grup11-7edit |
+      | grup11-8edit |
     Then Success message should be displayed

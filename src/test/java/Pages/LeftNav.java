@@ -45,7 +45,6 @@ public class LeftNav extends Parent {
 
     @FindBy(xpath = "(//span[text()='Attestations'])[1]") //sg
     private WebElement attestations;
-
     @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")  //sg
     private WebElement bankAccounts;
 

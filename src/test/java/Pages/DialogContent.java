@@ -81,7 +81,6 @@ public class DialogContent extends Parent{
     private WebElement  fieldAdd ;
     @FindBy(css = "[data-placeholder='IBAN']")   //seda
     private WebElement ibanInput;
-
     @FindBy(xpath ="//ms-text-field[@formcontrolname='integrationCode']//input")   //seda
     private WebElement integrationInput;
 
@@ -103,8 +102,6 @@ public class DialogContent extends Parent{
             case "priority" :       myElement=  priority;       break;
             case "ibanInput":       myElement=ibanInput;        break;
             case "integrationInput": myElement=integrationInput; break;
-            case "currencyInput" :   myElement=currencyInput;      break;
-
 
         }
         // burda string isimden webelemente ulaşıcam

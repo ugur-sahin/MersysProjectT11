@@ -36,7 +36,6 @@ public class TEST11_02_AttestationsSteps {
         for (int i = 0; i < listElement.size(); i++)
             dc.findAndSend(listElement.get(i).get(0), listElement.get(i).get(1));
     }
-
     @And("Click on save button in the Dialog")
     public void clickOnSaveButtonInTheDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
