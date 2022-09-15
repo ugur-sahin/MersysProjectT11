@@ -71,10 +71,12 @@ public class DialogContent extends Parent{
     private WebElement  studentRegistration ;
     @FindBy(css = "[data-icon='trash-can']>path")                         // inanc
     private WebElement  deleteButtonnn ;
-    @FindBy(xpath = "//*[@id='ms-text-field-20']")                         // inanc
-    private WebElement  order ;
+    @FindBy(css = "[formcontrolname='order']>input")                         // inanc
+    private WebElement  orderInput ;
     @FindBy(xpath = "//button[@type='submit']//span")                         // inanc
     private WebElement  deleteinanc ;
+    @FindBy(css = "[id='ms-table-0_id']>div")                         // inanc
+    private WebElement  siralama ;
 
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
@@ -88,7 +90,7 @@ public class DialogContent extends Parent{
             case "searchInput" :    myElement=  searchInput;    break;
             case "capacity" :       myElement=  capacity;       break;
             case "Description" :    myElement=  Description;    break;
-            case "order" :          myElement=  order;          break;
+            case "orderInput" :          myElement=  orderInput;          break;
             case "Description2" :   myElement=  Description2;   break;
             case "integrationCode" :myElement=  integrationCode;break;
             case "priority" :       myElement=  priority;       break;
@@ -114,6 +116,7 @@ public class DialogContent extends Parent{
             case "Stage": myElement = Stage;  break;
             case "studentRegistration": myElement = studentRegistration;  break;
             case "deleteinanc": myElement = deleteinanc;  break;
+
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
