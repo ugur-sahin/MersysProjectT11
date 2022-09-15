@@ -79,12 +79,8 @@ public class DialogContent extends Parent{
     private WebElement  siralama ;
     @FindBy(css = "[data-icon='plus']")                         // inanc
     private WebElement  fieldAdd ;
-
     @FindBy(css = "[data-placeholder='IBAN']")   //seda
     private WebElement ibanInput;
-
-    @FindBy(xpath="//div[@id='mat-select-value-141']")   //seda
-    private WebElement currencyInput;
 
     @FindBy(xpath ="//ms-text-field[@formcontrolname='integrationCode']//input")   //seda
     private WebElement integrationInput;
