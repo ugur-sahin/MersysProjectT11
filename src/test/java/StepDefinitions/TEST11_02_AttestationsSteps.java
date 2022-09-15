@@ -59,9 +59,8 @@ public class TEST11_02_AttestationsSteps {
     @And("User delete item from Dialog")
     public void userDeleteItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
-        for(int i=0;i<listElement.size();i++) {
+        for(int i=0;i<listElement.size();i++)
             dc.SearchAndDeletery(listElement.get(i));
-        }
     }
 }
 

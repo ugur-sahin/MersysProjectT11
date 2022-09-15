@@ -75,6 +75,7 @@ public class LeftNav extends Parent {
             case "bankAccounts" : myElement=bankAccounts;break;
 
         }
+
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
     }
