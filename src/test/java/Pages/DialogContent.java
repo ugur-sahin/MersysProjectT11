@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,8 +47,6 @@ public class DialogContent extends Parent{
     private WebElement searchButton;
     @FindBy(xpath = "//ms-delete-button//button")                         // common
     private WebElement deleteButton;
-    @FindBy(xpath = "//ms-delete-button//button")                         // common
-    private WebElement deleteButtonsk;
     @FindBy(xpath = "(//button[@class='consent-give'])[1]")             // common
     private WebElement acceptCookies;
     @FindBy(xpath = "//span[contains(text(),'Delete')]") //ry
@@ -58,11 +57,9 @@ public class DialogContent extends Parent{
     private WebElement capacity;
     @FindBy(xpath = "//ms-edit-button//button")                         // inanc
     private WebElement SubjectEditButton;
-    @FindBy(xpath = "//ms-edit-button//button")                         // selim
-    private WebElement DiscountEditButton;
-    @FindBy(xpath = "//textarea[@formcontrolname='description']")                         // selim
+    @FindBy(xpath = "//textarea[@formcontrolname='description']")                         // inanc
     private WebElement Description;
-    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']//div//div")                         // selim
+    @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']//div//div")                         // inanc
     private WebElement Stage;
     @FindBy(css = "[class='mat-option-text']")                         // inanc
     private WebElement  studentRegistration ;
@@ -72,14 +69,6 @@ public class DialogContent extends Parent{
     private WebElement  order ;
     @FindBy(xpath = "//button[@type='submit']//span")                         // inanc
     private WebElement  deleteinanc ;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']//input")                         // selim
-    private WebElement Description2;
-    @FindBy(xpath = "//ms-text-field[contains(@placeholder,'TITLE.DESCRIPTION')]//input")                         // selim
-    private WebElement DescriptionInput;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")                         // selim
-    private WebElement integrationCode;
-    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")                         // selim
-    private WebElement priority;
 
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
@@ -94,10 +83,6 @@ public class DialogContent extends Parent{
             case "capacity" :       myElement=  capacity;       break;
             case "Description" :    myElement=  Description;    break;
             case "order" :          myElement=  order;          break;
-            case "Description2" :   myElement=  Description2;   break;
-            case "DescriptionInput" :   myElement=  DescriptionInput;   break;
-            case "integrationCode" :myElement=  integrationCode;break;
-            case "priority" :       myElement=  priority;       break;
 
 
         }
@@ -112,13 +97,11 @@ public class DialogContent extends Parent{
             case "saveButton" :     myElement = saveButton; break;
             case "searchButton" :   myElement = searchButton; break;
             case "deleteButton" :   myElement = deleteButton; break;
-            case "deleteButtonsk" :   myElement = deleteButtonsk; break;
             case "acceptCookies" :  myElement = acceptCookies; break;
             case "editButton" :     myElement = editButton; break;
             case "deleteDialogBtn" :     myElement = deleteDialogBtn; break;
             case "rEdit" :     myElement = rEdit; break;
             case "SubjectEditButton": myElement = SubjectEditButton;  break;
-            case "DiscountEditButton": myElement = DiscountEditButton;  break;
             case "Stage": myElement = Stage;  break;
             case "studentRegistration": myElement = studentRegistration;  break;
             case "deleteinanc": myElement = deleteinanc;  break;
@@ -172,6 +155,7 @@ public class DialogContent extends Parent{
     {
         findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
         findAndClick("searchButton"); // arama butonuna bas
+        GWD.Bekle(3);
 //        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
 //        wait.until(ExpectedConditions.stalenessOf(deleteButton));
 
@@ -187,31 +171,6 @@ public class DialogContent extends Parent{
         findAndClick("deleteinanc");
 
     }
-    public void SearchAndEditsk(String searchText) {
-        waitUntilSearch();
-        findAndSend("searchInput", searchText); // aranacak kelimeyi kutucuğa gönder
-        findAndClick("searchButton"); // arama butonuna bas
-//        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.stalenessOf(deleteButton));
-        findAndClick("DiscountEditButton"); // silme butonuna bas
-
-    }
-
-
-    public void SearchAndDeletesk(String searchText){
-        waitUntilSearch();
-        findAndSend("searchInput",searchText); // aranacak kelimeyi kutucuğa gönder
-        findAndClick("searchButton"); // arama butonuna bas
-
-//        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.stalenessOf(deleteButton));
-//        GWD.Bekle(3);
-
-        findAndClick("deleteButtonsk"); // silme butonuna bas
-        findAndClick("deleteDialogBtn"); // dialogdaki silme butonuna bas
-
-    }
-
 
 
 
