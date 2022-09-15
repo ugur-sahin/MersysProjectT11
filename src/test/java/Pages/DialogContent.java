@@ -59,6 +59,12 @@ public class DialogContent extends Parent{
     private WebElement SubjectEditButton;
     @FindBy(xpath = "//textarea[@formcontrolname='description']")                         // inanc
     private WebElement Description;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']//input")                         // selim
+    private WebElement Description2;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")                         // selim
+    private WebElement integrationCode;
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")                         // selim
+    private WebElement priority;
     @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']//div//div")                         // inanc
     private WebElement Stage;
     @FindBy(css = "[class='mat-option-text']")                         // inanc
@@ -83,6 +89,9 @@ public class DialogContent extends Parent{
             case "capacity" :       myElement=  capacity;       break;
             case "Description" :    myElement=  Description;    break;
             case "order" :          myElement=  order;          break;
+            case "Description2" :   myElement=  Description2;   break;
+            case "integrationCode" :myElement=  integrationCode;break;
+            case "priority" :       myElement=  priority;       break;
 
 
         }

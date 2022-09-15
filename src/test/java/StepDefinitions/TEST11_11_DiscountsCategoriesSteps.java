@@ -48,7 +48,7 @@ public class TEST11_11_DiscountsCategoriesSteps {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
             GWD.Bekle(2);
-            dc.SearchAndEditsk(listElement.get(i));
+            dc.SearchAndEdit(listElement.get(i));
         }
     }
 
@@ -57,7 +57,7 @@ public class TEST11_11_DiscountsCategoriesSteps {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
             GWD.Bekle(2);
-            dc.SearchAndDeletesk(listElement.get(i));
+            dc.SearchAndDeletery(listElement.get(i));
         }
 
     }
