@@ -59,6 +59,12 @@ public class DialogContent extends Parent{
     private WebElement SubjectEditButton;
     @FindBy(xpath = "//textarea[@formcontrolname='description']")                         // inanc
     private WebElement Description;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']//input")                         // selim
+    private WebElement Description2;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")                         // selim
+    private WebElement integrationCode;
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")                         // selim
+    private WebElement priority;
     @FindBy(xpath = "//mat-select[@formcontrolname='attachmentStages']//div//div")                         // inanc
     private WebElement Stage;
     @FindBy(css = "[class='mat-option-text']")                         // inanc
@@ -69,9 +75,6 @@ public class DialogContent extends Parent{
     private WebElement  order ;
     @FindBy(xpath = "//button[@type='submit']//span")                         // inanc
     private WebElement  deleteinanc ;
-
-    @FindBy(css = "[formcontrolname='active']")                        // ry
-    private WebElement  activeBtn ;
 
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
@@ -86,6 +89,9 @@ public class DialogContent extends Parent{
             case "capacity" :       myElement=  capacity;       break;
             case "Description" :    myElement=  Description;    break;
             case "order" :          myElement=  order;          break;
+            case "Description2" :   myElement=  Description2;   break;
+            case "integrationCode" :myElement=  integrationCode;break;
+            case "priority" :       myElement=  priority;       break;
 
 
         }
@@ -95,20 +101,19 @@ public class DialogContent extends Parent{
     public void findAndClick(String strElement ) // 2. aşama
     {
         switch (strElement){
-            case "loginButton" :        myElement = loginButton; break;
-            case "addButton" :          myElement = addButton; break;
-            case "saveButton" :         myElement = saveButton; break;
-            case "searchButton" :       myElement = searchButton; break;
-            case "deleteButton" :       myElement = deleteButton; break;
-            case "acceptCookies" :      myElement = acceptCookies; break;
-            case "editButton" :         myElement = editButton; break;
-            case "deleteDialogBtn" :    myElement = deleteDialogBtn; break;
-            case "rEdit" :              myElement = rEdit; break;
-            case "SubjectEditButton":   myElement = SubjectEditButton;  break;
-            case "Stage":               myElement = Stage;  break;
+            case "loginButton" :    myElement = loginButton; break;
+            case "addButton" :      myElement = addButton; break;
+            case "saveButton" :     myElement = saveButton; break;
+            case "searchButton" :   myElement = searchButton; break;
+            case "deleteButton" :   myElement = deleteButton; break;
+            case "acceptCookies" :  myElement = acceptCookies; break;
+            case "editButton" :     myElement = editButton; break;
+            case "deleteDialogBtn" :     myElement = deleteDialogBtn; break;
+            case "rEdit" :     myElement = rEdit; break;
+            case "SubjectEditButton": myElement = SubjectEditButton;  break;
+            case "Stage": myElement = Stage;  break;
             case "studentRegistration": myElement = studentRegistration;  break;
-            case "deleteinanc":         myElement = deleteinanc;  break;
-            case "activeBtn":           myElement = activeBtn;  break;
+            case "deleteinanc": myElement = deleteinanc;  break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);

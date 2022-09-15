@@ -26,24 +26,20 @@ public class LeftNav extends Parent {
     private WebElement DocumentTypes;
     @FindBy(id = "mat-select-value-15")
     private WebElement Stage;
-    @FindBy(xpath = "//span[text()='Human Resources']")
+    @FindBy(xpath = "//span[text()='Human Resources']")             //ry
     private WebElement humanResources;
-    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")             //ry
     private WebElement setupThree;
-    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")
+    @FindBy(xpath = "(//span[text()='Position Categories'])[1]")             //ry
     private WebElement positionCategories;
-    @FindBy(linkText = "School Setup")
+    @FindBy(linkText = "School Setup")             //ry
     private WebElement schoolSetup;
-    @FindBy(linkText = "Locations")
+    @FindBy(linkText = "Locations")             //ry
     private WebElement locations;
-    @FindBy(linkText = "Grade Levels")
+    @FindBy(linkText = "Grade Levels")             //ry
     private WebElement gradeLevels;
-
-    @FindBy(linkText = "Departments")
-    private WebElement departments;
-
-    @FindBy(linkText = "Positions")
-    private WebElement positions;
+    @FindBy(linkText = "Discounts")             //sk
+    private WebElement Discounts;
 
 
     WebElement myElement;
@@ -64,8 +60,7 @@ public class LeftNav extends Parent {
             case "schoolSetup" :     myElement = schoolSetup; break;
             case "locations" :     myElement = locations; break;
             case "gradeLevels" :     myElement = gradeLevels; break;
-            case "departments" :     myElement = departments; break;
-            case "positions" :     myElement = positions; break;
+            case "Discounts" :     myElement = Discounts; break;
 
         }
         // burda string isimden webelemente ulaşıcam
