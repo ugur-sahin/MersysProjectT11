@@ -77,6 +77,8 @@ public class DialogContent extends Parent{
     private WebElement  deleteinanc ;
     @FindBy(css = "[id='ms-table-0_id']>div")                         // inanc
     private WebElement  siralama ;
+    @FindBy(css = "[data-icon='plus']")                         // inanc
+    private WebElement  fieldAdd ;
 
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
@@ -116,6 +118,8 @@ public class DialogContent extends Parent{
             case "Stage": myElement = Stage;  break;
             case "studentRegistration": myElement = studentRegistration;  break;
             case "deleteinanc": myElement = deleteinanc;  break;
+            case "fieldAdd": myElement = fieldAdd;  break;
+
 
         }
         // burda string isimden webelemente ulaşıcam
@@ -149,6 +153,7 @@ public class DialogContent extends Parent{
         waitUntilSearch();
         findAndSend("searchInput",searchText);
         findAndClick("searchButton");
+        waitUntilSearch();
         findAndClick("rEdit");
         findAndSend("nameInput",editName);
         findAndClick("saveButton");
@@ -181,6 +186,12 @@ public class DialogContent extends Parent{
         //waitUntilLoading();
         findAndClick("deleteButton");
         findAndClick("deleteinanc");
+
+    }
+    public void searchAndClick(String searchText) { //inanc
+        waitUntilSearch();
+        //waitUntilLoading();
+        findAndClick("fieldAdd");
 
     }
 
