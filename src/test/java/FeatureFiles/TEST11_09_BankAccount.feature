@@ -4,7 +4,7 @@ Feature: Bank Account Functionality
     Given Navigate to basqar
     When Enter username and password and click login button
     Then User should login successfuly
-    And Click on the element in the left Nav
+    And Click on the element in the left Nav sg
       | setupOne     |
       | parameters   |
       | bankAccounts |
@@ -20,7 +20,7 @@ Feature: Bank Account Functionality
       | currencyTRY |
     And Click on save button in the Dialog sg
       | saveButton |
-    And success message should be displayed
+    And Success massage should be displayed
   Scenario:
     And Click on the element in the Dialog ry
       | rEdit |
@@ -30,7 +30,7 @@ Feature: Bank Account Functionality
       | integrationInput | 1199 |
     And Click on save button in the Dialog sg
       | saveButton |
-    And success message should be displayed
+    And success message should be displayed sg
   Scenario:
     And Click on the element in the Dialog ry
       | deleteButton |

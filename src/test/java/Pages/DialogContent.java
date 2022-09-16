@@ -81,15 +81,14 @@ public class DialogContent extends Parent{
     private WebElement  fieldAdd ;
     @FindBy(css = "[data-placeholder='IBAN']")   //seda
     private WebElement ibanInput;
+    @FindBy(xpath = "(//mat-select[@role='combobox']//div//div)[7]")   //seda
+    private WebElement currencyInput;
+    @FindBy(xpath = "(//*[@class='mat-option-text'])[4]")   //seda
+    private WebElement currencyTRY;
     @FindBy(xpath ="//ms-text-field[@formcontrolname='integrationCode']//input")   //seda
     private WebElement integrationInput;
-  //  @FindBy(css = "[class='mat-select-arrow ng-tns-c93-84']")                       // seda
-  //  private WebElement currencyInput;
-    @FindBy(xpath = "(//mat-select[@formcontrolname='currency']//div//div//span)[1]")                       // seda
-    private WebElement currencyInput;
 
-    @FindBy(xpath = "(//*[@class='mat-option-text'])[4]")                       // seda
-    private WebElement currencyTRY;
+
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
     {
@@ -130,8 +129,8 @@ public class DialogContent extends Parent{
             case "studentRegistration": myElement = studentRegistration;  break;
             case "deleteinanc": myElement = deleteinanc;  break;
             case "fieldAdd": myElement = fieldAdd;  break;
-            case "currencyInput": myElement=currencyInput; break;
-            case "currencyTRY": myElement=currencyTRY; break;
+            case "currencyInput": myElement = currencyInput;  break;
+            case "currencyTRY": myElement = currencyTRY;  break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);

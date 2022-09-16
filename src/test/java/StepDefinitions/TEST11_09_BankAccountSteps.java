@@ -20,7 +20,7 @@ public class TEST11_09_BankAccountSteps {
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
 
-    @And("Click on the element in the left Nav")
+    @And("Click on the element in the left Nav sg")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
         List<String> listElement=elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++){
@@ -45,7 +45,7 @@ public class TEST11_09_BankAccountSteps {
         for (int i = 0; i < listElement.size(); i++)
            dc.findAndClick(listElement.get(i));
     }
-    @And("success message should be displayed")
+    @And("success message should be displayed sg")
     public void successMessageShouldBeDisplayed() {
         dc.findAndContainsText("successMessage", "success");
     }

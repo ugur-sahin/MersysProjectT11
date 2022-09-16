@@ -8,9 +8,9 @@ Feature: Subject Categories
 
   Scenario: Add Nationalities, Edit Nationalities and Delete Nationalities
     And Click on the element in the left Nav
-      | setupOne         |
+      | setupOne      |
       | parameters    |
-      | Nationalities |
+      | nationalities |
     And Click on the element in the Dialog2
       | addButton |
     And User sending the keys in Dialog content2

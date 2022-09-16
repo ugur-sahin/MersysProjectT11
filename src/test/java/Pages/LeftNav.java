@@ -13,7 +13,6 @@ public class LeftNav extends Parent {
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     private WebElement setupOne;
-
     @FindBy(xpath = "//span[text()='Parameters']")
     private WebElement parameters;
     @FindBy(xpath = "//span[text()='Education']")
@@ -38,13 +37,20 @@ public class LeftNav extends Parent {
     private WebElement locations;
     @FindBy(linkText = "Grade Levels")             //ry
     private WebElement gradeLevels;
+    @FindBy(linkText = "Departments")             //ry
+    private WebElement departments;
+    @FindBy(linkText = "Positions")             //ry
+    private WebElement positions;
     @FindBy(linkText = "Discounts")             //sk
     private WebElement Discounts;
+    @FindBy(linkText = "Nationalities")             //sk
+    private WebElement nationalities;
     @FindBy(linkText = "Fields")             //sk
     private WebElement fields;
-    @FindBy(xpath = "//span[text()='Nationalities']") // inanc
-    private WebElement Nationalities;
-
+    @FindBy(xpath = "(//span[text()='Attestations'])[1]") //sg
+    private WebElement attestations;
+    @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")  //sg
+    private WebElement bankAccounts;
 
     WebElement myElement;
 
@@ -62,12 +68,18 @@ public class LeftNav extends Parent {
             case "setupThree" :     myElement = setupThree; break;
             case "positionCategories" :     myElement = positionCategories; break;
             case "schoolSetup" :     myElement = schoolSetup; break;
+            case "positions" :     myElement = positions; break;
             case "locations" :     myElement = locations; break;
             case "gradeLevels" :     myElement = gradeLevels; break;
             case "Discounts" :     myElement = Discounts; break;
             case "fields" :     myElement = fields; break;
-            case "Nationalities" :     myElement = Nationalities; break;
+            case "attestations": myElement=attestations; break;
+            case "bankAccounts" : myElement=bankAccounts;break;
+            case "departments" : myElement=departments;break;
+            case "nationalities" : myElement=nationalities;break;
+
         }
+
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
     }

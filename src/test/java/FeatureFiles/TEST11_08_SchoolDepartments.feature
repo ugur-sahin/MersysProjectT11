@@ -27,7 +27,6 @@ Feature: School Departments Functionality
       | nameInput | grup11edit |
       | codeInput | 1112       |
     And Click on the element in the Dialog ry
-      | activeBtn  |
       | saveButton |
     And Success message should be displayed ry
 
