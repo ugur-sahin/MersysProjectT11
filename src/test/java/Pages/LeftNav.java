@@ -42,8 +42,6 @@ public class LeftNav extends Parent {
     private WebElement Discounts;
     @FindBy(linkText = "Fields")             //sk
     private WebElement fields;
-    @FindBy(xpath = "//span[text()='Nationalities']") //i
-    private WebElement Nationalities;
 
 
     WebElement myElement;
@@ -66,7 +64,6 @@ public class LeftNav extends Parent {
             case "gradeLevels" :     myElement = gradeLevels; break;
             case "Discounts" :     myElement = Discounts; break;
             case "fields" :     myElement = fields; break;
-            case "Nationalities" :     myElement = Nationalities; break;
         }
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
