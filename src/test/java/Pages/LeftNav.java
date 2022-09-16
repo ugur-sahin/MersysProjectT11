@@ -43,6 +43,10 @@ public class LeftNav extends Parent {
     @FindBy(linkText = "Fields")             //sk
     private WebElement fields;
 
+    @FindBy(xpath = "(//span[text()='Attestations'])[1]") //sg
+    private WebElement attestations;
+    @FindBy(xpath="(//span[text()='Bank Accounts'])[1]")  //sg
+    private WebElement bankAccounts;
 
     WebElement myElement;
 
@@ -64,7 +68,10 @@ public class LeftNav extends Parent {
             case "gradeLevels" :     myElement = gradeLevels; break;
             case "Discounts" :     myElement = Discounts; break;
             case "fields" :     myElement = fields; break;
+            case "attestations": myElement=attestations; break;
+            case "bankAccounts" : myElement=bankAccounts;break;
         }
+
         // burda string isimden webelemente ulaşıcam
         clickFunction(myElement);
     }
