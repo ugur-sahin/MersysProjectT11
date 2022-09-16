@@ -18,7 +18,7 @@ Feature: Subject Categories
     And Click on the element in the Dialog2
       | saveButton |
     And Success massage should be displayed2
-    And User edit item from Dialog
+    And User edit item from Dialog2
       | group11 |
     And User sending the keys in Dialog content2
       | nameInput | group111 |

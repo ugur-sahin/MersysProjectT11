@@ -56,7 +56,7 @@ public class TEST11_12_NationalitiesSteps {
 
 
     @And("User edit item from Dialog2")
-    public void userEditItemFromDialog(DataTable elements) {
+    public void userEditItemFromDialog2(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for (int i = 0; i < listElement.size(); i++) {
             dc.SearchAndEdit(listElement.get(i));
