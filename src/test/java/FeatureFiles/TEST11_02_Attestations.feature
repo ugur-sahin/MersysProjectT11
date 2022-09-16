@@ -8,7 +8,7 @@ Feature: Attestations Features Functionality
       | setupThree         |
       | attestations       |
   Scenario: Add Attestations
-    And Click on add attestations in the Dialog
+    And Click on add attestations in the Dialog SG
       | addButton |
     And Fill the input in Dialog content
       | nameInput | grup11-8 |
@@ -17,6 +17,6 @@ Feature: Attestations Features Functionality
     Then Success message should be displayed
     And Edit attestation content "grup11-9" edit "grup11-9edit"
     Then Success message should be displayed
-    And User delete item from Dialog
+    And User delete item from Dialog SG
       | grup11-9edit |
     Then Success message should be displayed

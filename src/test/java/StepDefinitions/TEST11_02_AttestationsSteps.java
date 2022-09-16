@@ -19,7 +19,7 @@ public class TEST11_02_AttestationsSteps {
             ln.findAndClick(listElement.get(i));
     }
 
-    @And("Click on add attestations in the Dialog")
+    @And("Click on add attestations in the Dialog SG")
     public void clickOnAddAttestationsInTheDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
 
@@ -51,7 +51,7 @@ public class TEST11_02_AttestationsSteps {
         dc.SearchAndEditry(oldName, newName);
     }
 
-    @And("User delete item from Dialog")
+    @And("User delete item from Dialog SG")
     public void userDeleteItemFromDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
         for(int i=0;i<listElement.size();i++)
