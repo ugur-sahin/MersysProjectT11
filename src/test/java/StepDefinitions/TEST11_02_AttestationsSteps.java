@@ -12,7 +12,6 @@ import java.util.List;
 public class TEST11_02_AttestationsSteps {
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
-
     @And("Click on the element in the left Navigation Bar")
     public void clickOnTheElementInTheLeftNavigationBar(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
@@ -26,9 +25,7 @@ public class TEST11_02_AttestationsSteps {
 
         for (int i = 0; i < listElement.size(); i++)
             dc.findAndClick(listElement.get(i));
-
     }
-
     @And("Fill the input in Dialog content")
     public void fillTheInputInDialogContent(DataTable elements) {
         List<List<String>> listElement = elements.asLists(String.class);

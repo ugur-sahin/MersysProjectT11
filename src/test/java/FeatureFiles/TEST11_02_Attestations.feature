@@ -15,8 +15,8 @@ Feature: Attestations Features Functionality
     And Click on save button in the Dialog
       | saveButton |
     Then Success message should be displayed
-    And Edit attestation content "grup11-8" edit "grup11-8edit"
+    And Edit attestation content "grup11-9" edit "grup11-9edit"
     Then Success message should be displayed
     And User delete item from Dialog
-      | grup11-8edit |
+      | grup11-9edit |
     Then Success message should be displayed

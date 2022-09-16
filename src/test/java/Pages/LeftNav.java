@@ -70,7 +70,6 @@ public class LeftNav extends Parent {
             case "fields" :     myElement = fields; break;
             case "attestations": myElement=attestations; break;
             case "bankAccounts" : myElement=bankAccounts;break;
-
         }
 
         // burda string isimden webelemente ulaşıcam

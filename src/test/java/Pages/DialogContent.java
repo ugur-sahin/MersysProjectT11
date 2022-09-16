@@ -84,6 +84,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath ="//ms-text-field[@formcontrolname='integrationCode']//input")   //seda
     private WebElement integrationInput;
 
+
     WebElement myElement;
     public void findAndSend(String strElement , String value) // 2. aşama
     {
