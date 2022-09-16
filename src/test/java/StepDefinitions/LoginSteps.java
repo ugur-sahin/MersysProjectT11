@@ -20,8 +20,8 @@ public class LoginSteps {
         dc.findAndClick("loginButton");
         dc.findAndClick("acceptCookies");
     }
-    @Then("User should login successfuly")
-    public void userShouldLoginSuccessfuly() {
+    @Then("User should login successfully")
+    public void userShouldLoginSuccessfully() {
         dc.findAndContainsText("dashboard","Dashboard");
     }
 }

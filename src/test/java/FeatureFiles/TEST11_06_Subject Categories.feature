@@ -3,7 +3,7 @@ Feature: Subject Categories
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
-    Then User should login successfuly
+    Then User should login successfully
 
 
   Scenario: Add Subject Categories,Edit Subject Categories and Delete Subject Categories
@@ -18,15 +18,15 @@ Feature: Subject Categories
       | codeInput | group11 |
     And Click on the element in the Dialog
       | saveButton |
-    And Success massage should be displayed
+    And Success message should be displayed
     And User edit item from Dialog
       | group11 |
     And User sending the keys in Dialog content
       | codeInput | group11 |
     And Click on the element in the Dialog
       | saveButton |
-    And Success massage should be displayed
+    And Success message should be displayed
     And User delete item from Dialog
       | group11 |
-    And Success massage should be displayed
+    And Success message should be displayed
 

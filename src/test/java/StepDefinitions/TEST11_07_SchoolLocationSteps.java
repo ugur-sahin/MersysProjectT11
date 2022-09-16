@@ -8,13 +8,6 @@ import java.util.List;
 
 public class TEST11_07_SchoolLocationSteps {
     DialogContent dc = new DialogContent();
-
-    @And("Click on the element in the Dialog US")
-    public void clickOnTheElementInTheDialogUS() {
-
-
-    }
-
     @And("User Edit Location in the Dialog Content US")
     public void userEditLocationInTheDialogContentUS(DataTable elements) {
         List<List<String>> listElement = elements.asLists(String.class);
